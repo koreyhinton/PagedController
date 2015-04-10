@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8E11A6E91AD7FF2500D45CA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11A6E81AD7FF2500D45CA3 /* AppDelegate.swift */; };
-		8E11A6EB1AD7FF2500D45CA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11A6EA1AD7FF2500D45CA3 /* ViewController.swift */; };
-		8E11A6EE1AD7FF2500D45CA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E11A6EC1AD7FF2500D45CA3 /* Main.storyboard */; };
+		8E11A6EB1AD7FF2500D45CA3 /* PagedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11A6EA1AD7FF2500D45CA3 /* PagedController.swift */; };
 		8E11A6F01AD7FF2500D45CA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E11A6EF1AD7FF2500D45CA3 /* Images.xcassets */; };
 		8E11A6F31AD7FF2500D45CA3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E11A6F11AD7FF2500D45CA3 /* LaunchScreen.xib */; };
 		8E11A6FF1AD7FF2500D45CA3 /* PagedIteratorExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11A6FE1AD7FF2500D45CA3 /* PagedIteratorExampleTests.swift */; };
+		8E11A7091AD7FFD100D45CA3 /* PagedIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11A7081AD7FFD100D45CA3 /* PagedIterator.swift */; };
+		8E11A70B1AD8067300D45CA3 /* PagedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11A70A1AD8067300D45CA3 /* PagedDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		8E11A6E31AD7FF2400D45CA3 /* PagedIteratorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagedIteratorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E11A6E71AD7FF2500D45CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E11A6E81AD7FF2500D45CA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E11A6EA1AD7FF2500D45CA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E11A6ED1AD7FF2500D45CA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E11A6EA1AD7FF2500D45CA3 /* PagedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PagedController.swift; path = PagedIteratorExample/PagedController.swift; sourceTree = SOURCE_ROOT; };
 		8E11A6EF1AD7FF2500D45CA3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8E11A6F21AD7FF2500D45CA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8E11A6F81AD7FF2500D45CA3 /* PagedIteratorExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagedIteratorExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E11A6FD1AD7FF2500D45CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E11A6FE1AD7FF2500D45CA3 /* PagedIteratorExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedIteratorExampleTests.swift; sourceTree = "<group>"; };
+		8E11A7081AD7FFD100D45CA3 /* PagedIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagedIterator.swift; path = ../PagedIterator.swift; sourceTree = "<group>"; };
+		8E11A70A1AD8067300D45CA3 /* PagedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagedDataSource.swift; path = ../PagedDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +79,8 @@
 		8E11A6E51AD7FF2400D45CA3 /* PagedIteratorExample */ = {
 			isa = PBXGroup;
 			children = (
+				8EA277A81AD84FBA006B2D9C /* PagedController */,
 				8E11A6E81AD7FF2500D45CA3 /* AppDelegate.swift */,
-				8E11A6EA1AD7FF2500D45CA3 /* ViewController.swift */,
-				8E11A6EC1AD7FF2500D45CA3 /* Main.storyboard */,
 				8E11A6EF1AD7FF2500D45CA3 /* Images.xcassets */,
 				8E11A6F11AD7FF2500D45CA3 /* LaunchScreen.xib */,
 				8E11A6E61AD7FF2500D45CA3 /* Supporting Files */,
@@ -110,6 +111,16 @@
 				8E11A6FD1AD7FF2500D45CA3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EA277A81AD84FBA006B2D9C /* PagedController */ = {
+			isa = PBXGroup;
+			children = (
+				8E11A7081AD7FFD100D45CA3 /* PagedIterator.swift */,
+				8E11A70A1AD8067300D45CA3 /* PagedDataSource.swift */,
+				8E11A6EA1AD7FF2500D45CA3 /* PagedController.swift */,
+			);
+			path = PagedController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +203,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E11A6EE1AD7FF2500D45CA3 /* Main.storyboard in Resources */,
 				8E11A6F31AD7FF2500D45CA3 /* LaunchScreen.xib in Resources */,
 				8E11A6F01AD7FF2500D45CA3 /* Images.xcassets in Resources */,
 			);
@@ -212,7 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E11A6EB1AD7FF2500D45CA3 /* ViewController.swift in Sources */,
+				8E11A70B1AD8067300D45CA3 /* PagedDataSource.swift in Sources */,
+				8E11A6EB1AD7FF2500D45CA3 /* PagedController.swift in Sources */,
+				8E11A7091AD7FFD100D45CA3 /* PagedIterator.swift in Sources */,
 				8E11A6E91AD7FF2500D45CA3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,14 +248,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8E11A6EC1AD7FF2500D45CA3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E11A6ED1AD7FF2500D45CA3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E11A6F11AD7FF2500D45CA3 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,6 +415,7 @@
 				8E11A7041AD7FF2500D45CA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E11A7051AD7FF2500D45CA3 /* Build configuration list for PBXNativeTarget "PagedIteratorExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				8E11A7071AD7FF2500D45CA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
