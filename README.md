@@ -114,3 +114,7 @@ func addVC() {
 
 ### Example
 There is an example included that shows an implementation with controls allowing you to page to first, page to previous, page to next, page to last, add and move after current, delete current (if count > 1) and it properly disables and hides the controls as you'd expect
+
+First                      | Middle                    | Last
+:-------------------------:|:-------------------------:|:-------------------------:
+![](screenshot0.png) | ![](screenshot1.png) | ![](screenshot2.png)
