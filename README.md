@@ -64,7 +64,8 @@ pagedDataSource.load(pagedController)
 - Add ability for dynamic view controllers as opposed to having all in memory
 
 ### Architecture
-*PagedIterator*
+**PagedIterator**
+
 The PagedIterator won't have to be touched unless you want to extend it or if you find a bug. It wraps an array of Objects that can be iterated over and keeps track of the current position. This makes the hairy data source methods a one-liner:
 
 ```swift
@@ -79,12 +80,14 @@ func pageViewController(pageViewController: UIPageViewController, viewController
 
 The code above is already built-in for you so you don't have to do anything.
 
-*PagedController*
+**PagedController**
+
 The PagedController is a subclass of UIPageViewController and also a delegate to UIPageViewControllerDelegate. It will give you updates of the page state if you implement give its initializer a pageStateCompletion closure. 
 
 
 
-*PagedDataSource*
+**PagedDataSource**
+
 The data source provides the view controllers to the page controller and also has a bunch of methods to move between, add, and remove view controllers. It also takes care of the initial load of the first view controller. It gives you the interface to load and modify the view controllers in UIPageViewController in place.
 ```swift
 pagedDataSource.moveNext(true) // true means animate it
